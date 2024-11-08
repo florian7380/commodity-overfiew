@@ -1,0 +1,2 @@
+from fkt_stonks.fkt_MainWindow.fkt_create_tabs.fkt_create_table.get_compair_data import get_compair_data
+from fkt_stonks.fkt_MainWindow.fkt_create_tabs.fkt_create_table.get_single_data import get_single_data

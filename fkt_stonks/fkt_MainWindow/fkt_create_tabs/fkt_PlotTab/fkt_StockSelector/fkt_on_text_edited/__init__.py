@@ -1,0 +1,1 @@
+from fkt_stonks.fkt_MainWindow.fkt_create_tabs.fkt_PlotTab.fkt_StockSelector.fkt_on_text_edited.filter_list import filter_list

@@ -1,0 +1,1 @@
+from fkt_stonks.fkt_MainWindow.fkt_AlphaVantageThread.Upload_AlpVan_Data import Upload_AlpVan_Data

@@ -1,0 +1,3 @@
+from fkt_stonks.fkt_MainWindow.fkt_create_tabs.PlotTab import PlotTab
+from fkt_stonks.fkt_MainWindow.fkt_create_tabs.create_table import create_table
+from fkt_stonks.fkt_MainWindow.fkt_create_tabs.fill_upload_tab import fill_upload_tab

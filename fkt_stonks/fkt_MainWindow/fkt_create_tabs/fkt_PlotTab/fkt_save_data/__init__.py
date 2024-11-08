@@ -1,0 +1,1 @@
+from fkt_stonks.fkt_MainWindow.fkt_create_tabs.fkt_PlotTab.fkt_save_data.update_plot import update_plot
