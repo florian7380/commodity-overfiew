@@ -1,6 +1,7 @@
 # DAX 40, Euro Stoxx 50, FTSE 100, CAC 40, IBEX 35 und OMX Stockholm 30
 
 AlphaVantageList = [
+    "COAL",      # Kohle
     "ZN",       # Zink
     "KC",       # Kaffee
     "CO",       # Kobalt
@@ -9,6 +10,9 @@ AlphaVantageList = [
     "SC",       # Scandium
     "TI",       # Titan
     "MN",       # Mangan
+    "LI",       # Lithium
+    "S",        # Weizen
+    "SN",       # Zinn
     "ADS.DE",   # Adidas
     "AIR.DE",   # Airbus
     "ALV.DE",   # Allianz
@@ -47,6 +51,8 @@ AlphaVantageList = [
     "SHL.DE",   # Siemens Healthineers
     "HEI.DE",   # Heidelberg Materials
     "MBG.DE",    # Mercedes-Benz Group
+    "SONY",     # Sony Group Corporation (Japan) - Electronics/Entertainment, NYSE
+    "SKM",      # SK Telecom (South Korea) - Telecommunications, NYSE
     "SSNLF", # Samsung Electronics (South Korea) - Electronics/Semiconductors, Korea Exchange
     "RLNIY",  # Reliance Industries (India) - Energy/Retail/Telecom, National Stock Exchange of India
     "CHL",  # China Mobile (China) - Telecommunications, Hong Kong Stock Exchange
@@ -173,7 +179,6 @@ AlphaVantageList = [
     "PUB.PA",   # Publicis Groupe
     "RI.PA",    # Pernod Ricard
     "SGO.PA",   # Saint-Gobain
-    "SNP.PA",   # Suez
     "SW.PA",    # Sodexo
     "STM.PA",   # STMicroelectronics
     "UG.PA",    # Peugeot (Stellantis)
@@ -182,6 +187,7 @@ AlphaVantageList = [
     "RNO.PA",   # Renault
     "HO.PA",    # Thales
     "FP.PA",     # TotalEnergies
+    "SMP",      # Smartgroup Corporation
     "WBC",    # Westpac Banking Corporation
     "COL",    # Coles Group
     "SCG",    # Scentre Group

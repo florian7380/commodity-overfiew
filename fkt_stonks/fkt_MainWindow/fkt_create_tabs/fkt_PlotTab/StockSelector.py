@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QCompleter
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QCompleter, QPushButton
 from PyQt5.QtCore import Qt, QEvent, pyqtSignal
 
 
@@ -19,6 +19,11 @@ class StockSelector(QWidget):
         self.entry = QLineEdit()
         self.entry.setPlaceholderText("Aktie auswählen")
         self.top_layout.addWidget(self.entry)
+        
+        # Delete button
+        self.delete_button = QPushButton("x")
+        self.top_layout.addWidget(self.delete_button)
+        self.delete_button.clicked.connect(self.delete_share)
 
         # QCompleter mit dem Stock-List-Modell
         self.completer = QCompleter(stock_list)
@@ -56,3 +61,7 @@ class StockSelector(QWidget):
         if obj == self.entry and event.type() == QEvent.FocusIn:
             self.completer.complete()  # Liste sofort anzeigen
         return super().eventFilter(obj, event)
+    
+    def delete_share(self):
+        self.entry.setText("")
+        self.stock_selected.emit("")

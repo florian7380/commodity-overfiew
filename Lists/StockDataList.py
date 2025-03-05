@@ -9,16 +9,12 @@ StockDataList = [
     "ZS",       # Sojabohnen
     "SB",       # Zucker
     "CC",       # Kakao
-    "COAL",     # Kohle
     "PB",       # Blei
     "LC",       # Lebendrind
     "RH",       # Rhodium
     "IR",       # Eisen
-    "LI",       # Lithium
     "BIT",      # Bitcoin
-    "S",        # Weizen
     "MO",       # Molybdän
-    "SN",       # Zinn
     "MG",       # Magnesium
     "V",        # Vanadium
     "CR",       # Chrom
@@ -29,11 +25,8 @@ StockDataList = [
     "HDB",      # HDFC Bank (India) - Banking, NYSE
     "TM",       # Toyota Motor Corporation (Japan) - Automotive, NYSE
     "MUFG",     # Mitsubishi UFJ Financial Group (Japan) - Financial Services, NYSE
-    "SONY",     # Sony Group Corporation (Japan) - Electronics/Entertainment, NYSE
     "INFY",     # Infosys (India) - IT Services, NYSE
-    "SKM",      # SK Telecom (South Korea) - Telecommunications, NYSE
     "SHG",      # Shinhan Financial Group (South Korea) - Financial Services, NYSE
-    "SNP",      # China Petroleum & Chemical Corporation (Sinopec) (China) - Oil & Gas, NYSE
     "SMFG",     # Sumitomo Mitsui Financial Group (Japan) - Banking, NYSE
     "PDD",      # Pinduoduo (China) - E-commerce, NASDAQ
     "KB",       # KB Financial Group (South Korea) - Banking, NYSE
@@ -42,8 +35,6 @@ StockDataList = [
     "RIO",      # Rio Tinto Group
     "CSL",      # CSL Limited
     "WES",      # Wesfarmers
-    "WDS",      # Woodside Energy Group
-    "TLS",      # Telstra Corporation
     "WOW",      # Woolworths Group
     "SUN",      # Suncorp Group
     "ALL",      # Aristocrat Leisure
@@ -53,6 +44,5 @@ StockDataList = [
     "BPT",      # Beach Energy
     "IAG",      # Insurance Australia Group
     "MGR",      # Mirvac Group
-    "SMP",      # Smartgroup Corporation
     "EVN"       # Evolution Mining
 ]

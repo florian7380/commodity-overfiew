@@ -1,6 +1,7 @@
 from PyQt5.QtCore import QThread
 import requests
 from Lists import AlphaVantageList
+from Lists.TokenList import av_token
 from fkt_stonks.fkt_MainWindow.fkt_AlphaVantageThread import Upload_AlpVan_Data
 from fkt_stonks.fkt_MainWindow.fkt_for_Threads import save_last_ticker, load_last_ticker
 
@@ -26,7 +27,7 @@ class AlphaVantageThread(QThread):
             start_index = 0
             
         # Download the data from AlphaVantage, starting from where we left off
-        api_token = ""
+        api_token = av_token
         for name in AlphaVantageList[start_index:]:
             
             # Stop if the thread is no longer running
@@ -43,6 +44,7 @@ class AlphaVantageThread(QThread):
                 if "Time Series (Daily)" in stock_data:
                     Upload_AlpVan_Data(stock_data)  # Process and upload the data
                     # Save the current ticker to resume later
+                    print("alpha vantage: ", name)
                     save_last_ticker(name, "AlphaVantage_last_ticker.db")
                 elif "Error Message" in stock_data:
                     print("AlphaVantageThread: ", f"Stopping further requests: {stock_data['Error Message']}")

@@ -5,7 +5,6 @@ def get_tickers(db_name):
         # Verbindung zur SQLite-Datenbank herstellen
         conn = sqlite3.connect(db_name)
         cursor = conn.cursor()
-        print(db_name)
         
         # Abfrage aller einzigartigen Ticker
         cursor.execute('''SELECT DISTINCT ticker FROM eod_data''')

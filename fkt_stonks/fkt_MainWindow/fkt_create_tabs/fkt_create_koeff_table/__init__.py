@@ -1,0 +1,1 @@
+from fkt_stonks.fkt_MainWindow.fkt_create_tabs.fkt_create_koeff_table.get_single_data import get_single_data

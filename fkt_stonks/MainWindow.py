@@ -5,16 +5,12 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         
+        #fkt.delete_double_dates()
         # Upload in neuem Thread starten
         self.polygonio_thread = fkt.PolygonIOThread()
         self.alphavantage_thread = fkt.AlphaVantageThread()
         self.stockdata_thread = fkt.StockdataThread()
         self.calculate_thread = fkt.CalculateThread()
-        
-        self.polygonio_thread.start()
-        self.alphavantage_thread.start()
-        self.stockdata_thread.start()
-        self.calculate_thread.start()
         
         # Hauptfenster
         self.setWindowTitle("Aktien- und Wertpapierverwaltung")
@@ -25,6 +21,11 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.tabs)
         # Reiter erstellen
         fkt.create_tabs(self.tabs)
+        
+        self.polygonio_thread.start()
+        self.alphavantage_thread.start()
+        self.stockdata_thread.start()
+        self.calculate_thread.start()
         
     def closeEvent(self, event):
         # This method is called when the window is closed

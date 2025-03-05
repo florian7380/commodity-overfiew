@@ -3,6 +3,7 @@ from  time import sleep
 import requests
 from dateutil.relativedelta import relativedelta
 from datetime import date
+from Lists.TokenList import polyio_token
 import fkt_stonks.fkt_MainWindow.fkt_PolygonIOThread as fkt
 
 class PolygonIOThread(QThread):
@@ -15,7 +16,7 @@ class PolygonIOThread(QThread):
         self._is_running = False
     
     def run(self):
-        api_token = ""
+        api_token = polyio_token
         day = date.today() - relativedelta(days=1)
         recieved_data = True
         existing_dates = fkt.get_existing_dates()
@@ -46,6 +47,7 @@ class PolygonIOThread(QThread):
                         print(url)
                     else:
                         fkt.Upload_PolyIO_Data(stock_data)  # Upload the data to the database
+                        print("polygonio: ", day)
                 else:
                     print("PolygonIOThread: ", f"Error fetching data for {day}: {response.status_code}")
                     print(url)

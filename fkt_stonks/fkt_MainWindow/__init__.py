@@ -3,3 +3,4 @@ from fkt_stonks.fkt_MainWindow.PolygonIOThread import PolygonIOThread
 from fkt_stonks.fkt_MainWindow.AlphaVantageThread import AlphaVantageThread
 from fkt_stonks.fkt_MainWindow.StockdataThread import StockdataThread
 from fkt_stonks.fkt_MainWindow.CalculateThread import CalculateThread
+#from fkt_stonks.fkt_MainWindow.delete_double_dates import delete_double_dates

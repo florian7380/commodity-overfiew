@@ -13,7 +13,7 @@ def Upload_PolyIO_Data(polygon_data, db_name="PolygonIOStonks.db"):
         ticker TEXT,
         date TEXT,
         close REAL,
-        UNIQUE(ticker, date)  -- Table-level constraint to enforce uniqueness
+        UNIQUE(date)  -- Table-level constraint to enforce uniqueness
     )
     ''')
     

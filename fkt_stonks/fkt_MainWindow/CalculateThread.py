@@ -33,7 +33,6 @@ class CalculateThread(QThread):
             start_index_tic = TickerList.index(last_tickers[0]) if last_tickers[0] in TickerList else 0
             start_index_cal_tic = TickerList.index(last_tickers[1]) if last_tickers[1] in TickerList else 0
             start_index_cal_tic += 1
-            print("Bestimmen der Anfangswerte: ", start_index_tic, len(TickerList))
             # start loop again if it is run through. len(TickerList)-2 because the len(List) is one larger then the index and the last ticker doesn't get saved because it doesn't get compared
             if start_index_tic == len(TickerList)-2:
                 start_index_tic = 0
@@ -74,7 +73,7 @@ class CalculateThread(QThread):
                 day_av = 0.0
                 # calculation of the average  relative difference
                 for day in dif_rel[0]:
-                    day_av += day
+                    day_av += abs(day)
                 day_av /= len(dif_rel)
                 db_values.append(day_av)    # Aufnahme des Durchschnitts in die Werte für die Datenbank
                 
@@ -141,7 +140,6 @@ class CalculateThread(QThread):
                                     if comp_i > comp_max:
                                         comp_max = comp_i
                                         date_max = filtered_ticker_values[0][0][i]-filtered_ticker_values[0][0][0]
-                                        print(date_max/86400)
                             db_values.append(comp_max)
                             db_values.append(date_max)      # in this array is: day_av, comp_zero, comp_max, date_max
                             

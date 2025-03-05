@@ -13,5 +13,5 @@ def save_data(plot_tab, number, value):
     elif number == 5:
         plot_tab.compare = value
     
-    if plot_tab.share1 or plot_tab.share2:
-        update_plot(plot_tab)
+    #if plot_tab.share1 or plot_tab.share2:
+    update_plot(plot_tab)

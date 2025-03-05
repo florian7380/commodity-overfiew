@@ -1,15 +1,16 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout
 import pyqtgraph as pg
 import fkt_stonks.fkt_MainWindow.fkt_create_tabs.fkt_PlotTab as fkt
+from PyQt5.QtCore import QDate
 
 class PlotTab(QWidget):
     def __init__(self, tab):
         super().__init__()
         self.tab = tab
-        self.share1 = None
-        self.share2 = None
-        self.start_date = None
-        self.end_date = None
+        self.share1 = ""
+        self.share2 = ""
+        self.start_date = QDate()
+        self.end_date = QDate()
         self.compare = None
         
         # Beispiel Wertpapier-Liste

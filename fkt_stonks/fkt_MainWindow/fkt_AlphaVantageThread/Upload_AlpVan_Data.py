@@ -13,7 +13,7 @@ def Upload_AlpVan_Data(alpha_vantage_data, db_name="AlphaVantageStonks.db"):
         ticker TEXT,
         date TEXT,
         close REAL,
-        UNIQUE(ticker, date)  -- Table-level constraint to enforce uniqueness
+        UNIQUE(date)  -- Table-level constraint to enforce uniqueness
     )
     ''')
     

@@ -4,6 +4,7 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 from datetime import datetime
 from Lists import StockDataList
+from Lists.TokenList import sd_token
 from fkt_stonks.fkt_MainWindow.fkt_StockDataThread import Upload_StockData_Data
 import fkt_stonks.fkt_MainWindow.fkt_for_Threads as fkt
 
@@ -26,11 +27,10 @@ class StockdataThread(QThread):
         # Find the index to resume from
         start_index = StockDataList.index(last_ticker) if last_ticker in StockDataList else 0
         #if all inxes were loaded in the DB , start again.
-        if start_index == len(StockDataList):
+        if start_index == len(StockDataList)-1:
             start_index = 0
-        
         # Download the data from Stockdata.org
-        api_token = ""
+        api_token = sd_token
         for name in StockDataList[start_index:]:
             
             # Stopping when signal is coming
@@ -49,8 +49,7 @@ class StockdataThread(QThread):
             
             #running as long as the date is accessable from Stockdata
             while start_date < end_date:
-                
-                next_date = start_date + relativedelta(days=180)  # Add 6 months - may time frame to get data for
+                next_date = start_date + relativedelta(days=180)  # Add 6 months - max time frame to get data for
                 if next_date > date.today():
                     next_date = date.today() - relativedelta(days=1)
                     
@@ -67,6 +66,7 @@ class StockdataThread(QThread):
                     if "data" in stock_data and len(stock_data["data"]) > 0:
                         Upload_StockData_Data(stock_data, name)  # Upload data to DB
                         fkt.save_last_ticker(name, "StockData_last_ticker.db")
+                        print("Stockdata: ", name)
                     else:
                         print("StockdataThread: ", f"No valid data found for {name} in the API response.")
                         print(url)

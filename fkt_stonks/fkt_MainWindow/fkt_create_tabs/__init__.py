@@ -1,3 +1,4 @@
 from fkt_stonks.fkt_MainWindow.fkt_create_tabs.PlotTab import PlotTab
-from fkt_stonks.fkt_MainWindow.fkt_create_tabs.create_table import create_table
+from fkt_stonks.fkt_MainWindow.fkt_create_tabs.create_vergl_table import create_vergl_table
+from fkt_stonks.fkt_MainWindow.fkt_create_tabs.create_koeff_table import create_koeff_table
 from fkt_stonks.fkt_MainWindow.fkt_create_tabs.fill_upload_tab import fill_upload_tab

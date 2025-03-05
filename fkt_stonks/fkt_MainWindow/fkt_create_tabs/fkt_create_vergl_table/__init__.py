@@ -1,0 +1,2 @@
+from fkt_stonks.fkt_MainWindow.fkt_create_tabs.fkt_create_vergl_table.create_table import create_table
+from fkt_stonks.fkt_MainWindow.fkt_create_tabs.fkt_create_vergl_table.sort_table_by_column import sort_table_by_column

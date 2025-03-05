@@ -1,4 +1,4 @@
-import math
+from  math import sqrt
 
 def sigma(time, values, regres, plot_tab, share_one):
     sig = 0.0
@@ -8,7 +8,7 @@ def sigma(time, values, regres, plot_tab, share_one):
     # Compute mean squared error (sigma)
     for value in values:
         sig += value ** 2 / m
-    sig = math.sqrt(sig)
+    sig = sqrt(sig)
     
     r = 0
     g = 0

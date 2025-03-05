@@ -14,7 +14,7 @@ def Upload_StockData_Data(stock_data, ticker, db_name="StockDataStonks.db"):
         ticker TEXT,
         date TEXT,
         close REAL,
-        UNIQUE(ticker, date)  -- Table-level constraint to enforce uniqueness
+        UNIQUE(date)  -- Table-level constraint to enforce uniqueness
     )
     ''')
 
